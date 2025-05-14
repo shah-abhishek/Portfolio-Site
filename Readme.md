@@ -82,6 +82,5 @@ If you have any questions or suggestions, feel free to reach out:
 - **GitHub**: [shah-abhishek](https://github.com/shah-abhishek)
 - **LinkedIn**: [Abhishek Kumar](https://www.linkedin.com/in/abhishek-kumar/)
 
-Save this content as `README.md` in the root of your project.
 
 
