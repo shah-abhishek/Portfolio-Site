@@ -1,0 +1,173 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 100% 99%; /* Lighter background for portfolio */
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    --primary: 230 80% 60%; /* Slightly adjusted primary color */
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    --accent: 270 70% 65%; /* Slightly adjusted accent color */
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 230 80% 60%; /* Ring matches new primary */
+    
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222 40% 10%; /* Darker background for portfolio */
+    --foreground: 210 40% 98%;
+    
+    --card: 222 40% 12%; /* Darker card */
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 40% 10%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 230 75% 65%; /* Adjusted dark primary */
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 270 65% 70%; /* Adjusted dark accent */
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 217.2 32.6% 20%; /* Slightly lighter border for dark */
+    --input: 217.2 32.6% 20%;
+    --ring: 230 75% 65%; /* Ring matches new dark primary */
+  }
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--accent-rgb), 0.05) 25%, rgba(0, 0, 0, 0) 50%);
+}
+
+.card-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.12), 0 10px 15px -8px rgba(0, 0, 0, 0.08);
+}
+
+.service-card { /* Re-using for skill/project cards */
+  @apply relative overflow-hidden rounded-xl border p-6 card-hover;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+  backdrop-filter: blur(12px);
+  border-color: rgba(var(--border-rgb), 0.5);
+}
+
+.dark .service-card {
+  background: linear-gradient(145deg, rgba(var(--card-rgb), 0.7), rgba(var(--card-rgb), 0.4));
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(var(--primary-rgb), 0.05), rgba(var(--accent-rgb), 0.05));
+  z-index: -1;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+
+.blob {
+  position: absolute;
+  background: linear-gradient(45deg, rgba(var(--primary-rgb), 0.2), rgba(var(--accent-rgb), 0.2));
+  border-radius: 50%;
+  filter: blur(100px); /* Increased blur for softer blobs */
+  z-index: 0; /* Ensure it's behind content */
+  opacity: 0.6;
+  animation: blob-animation 20s infinite alternate ease-in-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: -10s; /* Offset animation for second blob */
+}
+
+
+@keyframes blob-animation {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(60px, -40px) scale(1.15);
+  }
+  50% {
+    transform: translate(-30px, 70px) scale(0.85);
+  }
+  75% {
+    transform: translate(40px, 30px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Helper for RGB values from HSL (approximated for CSS vars) */
+:root {
+  --primary-rgb: 97, 122, 240; /* Approx for hsl(230 80% 60%) */
+  --accent-rgb: 170, 118, 242;  /* Approx for hsl(270 70% 65%) */
+  --border-rgb: 203, 213, 225; /* Approx for hsl(214.3 31.8% 91.4%) */
+}
+.dark {
+  --primary-rgb: 122, 140, 242; /* Approx for hsl(230 75% 65%) */
+  --accent-rgb: 181, 138, 245;  /* Approx for hsl(270 65% 70%) */
+  --card-rgb: 30, 36, 52; /* Approx for hsl(222 40% 12%) */
+  --border-rgb: 51, 65, 85; /* Approx for hsl(217.2 32.6% 20%) */
+}
