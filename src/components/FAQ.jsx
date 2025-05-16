@@ -87,7 +87,7 @@ export default function Projects() {
             >
               <Card className="flex flex-col h-full overflow-hidden shadow-lg card-hover service-card">
                 <div className="aspect-video overflow-hidden">
-                  <img  class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" alt={project.title} src="https://images.unsplash.com/photo-1697256200022-f61abccad430" />
+                  <img  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" alt={project.title} src="https://images.unsplash.com/photo-1697256200022-f61abccad430" />
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl">{project.title}</CardTitle>

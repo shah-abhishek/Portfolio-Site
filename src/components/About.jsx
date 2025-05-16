@@ -24,7 +24,7 @@ export default function About() {
           >
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary rounded-xl transform rotate-3 transition-transform duration-500 hover:rotate-0"></div>
-              <img  class="rounded-xl shadow-2xl relative z-10 object-cover w-full max-h-[500px]" alt="Abhishek Kumar working on a project" src="https://images.unsplash.com/photo-1699658278185-5a392c0a1aff" />
+              <img  className="rounded-xl shadow-2xl relative z-10 object-cover w-full max-h-[500px]" alt="Abhishek Kumar working on a project" src="https://images.unsplash.com/photo-1699658278185-5a392c0a1aff" />
             </div>
           </motion.div>
           
