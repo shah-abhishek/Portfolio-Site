@@ -18,7 +18,7 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img className="w-40 h-40 rounded-full shadow-xl border-4 border-primary/50 object-cover" alt="Abhishek Kumar profile picture" src="https://images.unsplash.com/photo-1551437288-dce670e4d1e6" />
+            <img className="w-40 h-40 rounded-full shadow-xl border-4 border-primary/50 object-cover" alt="Abhishek Kumar profile picture" src="/AbhishekProfilePic.jpeg" />
           </motion.div>
 
           <motion.h1

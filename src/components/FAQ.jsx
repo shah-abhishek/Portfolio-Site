@@ -8,29 +8,70 @@ import { Github, ExternalLink, Eye } from "lucide-react";
 const projects = [
   {
     title: "E-commerce Platform",
-    description: "A full-featured e-commerce website with product listings, cart functionality, user authentication, and an admin panel for managing products and orders. Built with Next.js, TailwindCSS, and MongoDB.",
-    image: "e-commerce-project",
+    description: "A full-featured e-commerce website with product listings, cart functionality, user authentication, and an admin panel. Built with Next.js, TailwindCSS, and MongoDB.",
+    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
     tags: ["Next.js", "React", "TailwindCSS", "MongoDB", "Stripe"],
     liveLink: "#",
     githubLink: "#",
   },
   {
     title: "Task Management App",
-    description: "A collaborative task management application allowing users to create projects, assign tasks, track progress, and communicate with team members. Developed using React, Firebase, and Framer Motion.",
-    image: "task-management-app",
-    tags: ["React", "Firebase", "Framer Motion", "Realtime DB"],
+    description: "A collaborative task management tool with project boards, progress tracking, and real-time updates using React and Firebase.",
+    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    tags: ["React", "Firebase", "Framer Motion"],
     liveLink: "#",
     githubLink: "#",
   },
   {
-    title: "Personal Portfolio Website",
-    description: "This very portfolio website, designed to showcase my skills and projects. Built with React, Vite, TailwindCSS, and Framer Motion for smooth animations.",
-    image: "portfolio-website",
+    title: "Portfolio Website",
+    description: "My personal portfolio site built using Vite, React, and TailwindCSS to showcase projects and skills.",
+    image: "/projects/portfolio.png",
     tags: ["React", "Vite", "TailwindCSS", "Framer Motion"],
+    liveLink: "https://abhishekportfolio.developerbudy.com",
+    githubLink: "https://github.com/shah-abhishek/portfolio-vitejs",
+  },
+  {
+    title: "Gaming Site",
+    description: "A web platform to explore and play simple games. Built with HTML, CSS, and JavaScript.",
+    image: "/projects/gaming-site.png",
+    tags: ["JavaScript", "HTML", "CSS"],
+    liveLink: "https://developerbudy.com/",
+    githubLink: "https://github.com/shah-abhishek/Gaming-Site",
+  },
+  {
+    title: "NPM Trend UI",
+    description: "A React-based dashboard to visualize trends of npm packages. Includes filtering and charting capabilities.",
+    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    tags: ["React", "TypeScript", "Chart.js"],
     liveLink: "#",
-    githubLink: "#",
+    githubLink: "https://github.com/shah-abhishek/npm_trend_react_ui",
+  },
+  {
+    title: "NPM Trend API",
+    description: "The backend API for npm trend analysis using Node.js and Express, serves data for the UI dashboard.",
+    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    tags: ["Node.js", "Express", "REST API"],
+    liveLink: "#",
+    githubLink: "https://github.com/shah-abhishek/my_npm_trend_api",
+  },
+  {
+    title: "Express Passport Auth",
+    description: "A starter template demonstrating user authentication with Passport.js in an Express app.",
+    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    tags: ["Express", "Passport.js", "Authentication"],
+    liveLink: "#",
+    githubLink: "https://github.com/shah-abhishek/express-passport",
+  },
+  {
+    title: "Download Chart as Image",
+    description: "A utility to export charts and graphs as images or PDFs using Vega-Lite.",
+    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    tags: ["Vega-Lite", "Export", "HTML"],
+    liveLink: "#",
+    githubLink: "https://github.com/shah-abhishek/download-Chart-Into-Image",
   },
 ];
+
 
 const container = {
   hidden: { opacity: 0 },
@@ -52,7 +93,7 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
+          <motion.h2
             className="text-3xl md:text-4xl font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +102,7 @@ export default function Projects() {
           >
             My <span className="gradient-text">Projects</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-lg text-muted-foreground"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -72,7 +113,7 @@ export default function Projects() {
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={container}
           initial="hidden"
@@ -80,14 +121,14 @@ export default function Projects() {
           viewport={{ once: true }}
         >
           {projects.map((project, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               variants={item}
               className="h-full"
             >
               <Card className="flex flex-col h-full overflow-hidden shadow-lg card-hover service-card">
                 <div className="aspect-video overflow-hidden">
-                  <img  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" alt={project.title} src="https://images.unsplash.com/photo-1697256200022-f61abccad430" />
+                  <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" alt={project.title} src={project.image} />
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl">{project.title}</CardTitle>
