@@ -35,7 +35,7 @@ src/ components/ Contact.jsx # Main contact form component ui/ button.jsx # Reus
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/shah-abhishek/Portfolio-Site.git
    cd your-repo-name
 
 2. Install dependencies:
@@ -80,7 +80,7 @@ If you have any questions or suggestions, feel free to reach out:
 
 - **Email**: [abhikumar0123252@gmail.com](mailto:abhikumar0123252@gmail.com)
 - **GitHub**: [shah-abhishek](https://github.com/shah-abhishek)
-- **LinkedIn**: [Abhishek Kumar](https://www.linkedin.com/in/abhishek-kumar/)
+- **LinkedIn**: [Abhishek Kumar](https://linkedin.com/in/abhishek-kumar-916308174)
 
 
 
