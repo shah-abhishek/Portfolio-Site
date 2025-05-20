@@ -9,7 +9,7 @@ const projects = [
   {
     title: "E-commerce Platform",
     description: "A full-featured e-commerce website with product listings, cart functionality, user authentication, and an admin panel. Built with Next.js, TailwindCSS, and MongoDB.",
-    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    image: "/projects/github.png",
     tags: ["Next.js", "React", "TailwindCSS", "MongoDB", "Stripe"],
     liveLink: "#",
     githubLink: "#",
@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Task Management App",
     description: "A collaborative task management tool with project boards, progress tracking, and real-time updates using React and Firebase.",
-    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    image: "/projects/github.png",
     tags: ["React", "Firebase", "Framer Motion"],
     liveLink: "#",
     githubLink: "#",
@@ -41,7 +41,7 @@ const projects = [
   {
     title: "NPM Trend UI",
     description: "A React-based dashboard to visualize trends of npm packages. Includes filtering and charting capabilities.",
-    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    image: "/projects/github.png",
     tags: ["React", "TypeScript", "Chart.js"],
     liveLink: "#",
     githubLink: "https://github.com/shah-abhishek/npm_trend_react_ui",
@@ -49,7 +49,7 @@ const projects = [
   {
     title: "NPM Trend API",
     description: "The backend API for npm trend analysis using Node.js and Express, serves data for the UI dashboard.",
-    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    image: "/projects/github.png",
     tags: ["Node.js", "Express", "REST API"],
     liveLink: "#",
     githubLink: "https://github.com/shah-abhishek/my_npm_trend_api",
@@ -57,7 +57,7 @@ const projects = [
   {
     title: "Express Passport Auth",
     description: "A starter template demonstrating user authentication with Passport.js in an Express app.",
-    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    image: "/projects/github.png",
     tags: ["Express", "Passport.js", "Authentication"],
     liveLink: "#",
     githubLink: "https://github.com/shah-abhishek/express-passport",
@@ -65,7 +65,7 @@ const projects = [
   {
     title: "Download Chart as Image",
     description: "A utility to export charts and graphs as images or PDFs using Vega-Lite.",
-    image: "https://images.unsplash.com/photo-1697256200022-f61abccad430",
+    image: "/projects/github.png",
     tags: ["Vega-Lite", "Export", "HTML"],
     liveLink: "#",
     githubLink: "https://github.com/shah-abhishek/download-Chart-Into-Image",
